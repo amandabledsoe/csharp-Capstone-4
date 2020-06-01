@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "MissionIndex";
+}
+
+<h1>MissionIndex</h1>
+
+@model List<Mission>
+
+<table>
+    <tr>
+        <th>Mission Due Date</th>
+        <th>Mission Description</th>
+        <th>Mission Status</th>
+    </tr>
+@foreach(Mission mission in Model)
+{
+    <tr>
+        <td>@mission.DueDate</td>
+        <td>@mission.MissionDescription</td>
+        <td>@mission.Completed</td>
+    </tr>
+}
+</table>

@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "AddMission";
+}
+
+<h1>AddMission</h1>
+
+<form action="/Mission/AddMission?id=@Model[0].Id" method="post">
+    <input type="date" name="DueDate" placeholder="Due Date" />
+    <input type="text" name="MissionDescription" placeholder="Mission Description" />
+    <input type="checkbox" name="MissionDescription" value="true" /> Complete
+    <input type="checkbox" name="MissionDescription" placeholder="false" /> Not Complete
+
+    <input type="submit" value="Add Mission" />
+</form>
+
+@Html.ValidationSummary();
